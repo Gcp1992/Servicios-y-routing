@@ -1,0 +1,19 @@
+<h1>Formulario facturas</h1>
+
+<div>
+
+  <label for="idFactura">idFactura: </label> <input type="number" [(ngModel)]="fact.idFactura"><br><br>
+  <label for="idCliente">idCliente: </label> <input type="number" [(ngModel)]="fact.idCliente"><br><br>
+  <label for="factura">Factura: </label> <input type="number" [(ngModel)]="fact.totalFactura"><br><br>
+  <label for="iva">Iva: </label> <input type="number" [(ngModel)]="fact.iva"><br><br>
+
+  <input type="button" value="Mostrar" (click)="mostrar()"><br>
+  <input type="button" value="Crear" (click)="crear()"><br>
+  <input type="button" value="Eliminar" (click)="eliminar()"><br>
+  <input type="button" value="Modificar" (click)="modificar()"><br>
+
+</div>
+
+<div *ngFor="let f of devuelveArrayFactura()">
+  idFActura: {{f.idFactura}} idCliente: {{f.idCliente}}  totalFactura: {{f.totalFactura}} IVA: {{f.iva}}
+</div>
